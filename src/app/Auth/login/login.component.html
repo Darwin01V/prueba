@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center h-screen bg-slate-300">
+    <div>
+        <h1 class="text-center">
+            Iniciar Sesion
+        </h1>
+        <!--  #form="ngForm" -->
+        <form class="flex flex-col gap-5 mt-3" (ngSubmit)="onSubmit()">
+            <input type="text" name="email" pInputText [(ngModel)]="data.email" class="border px-4 py-2" placeholder="Email" />
+            <input type="text" name="password" pInputText [(ngModel)]="data.password" class="border px-4 py-2" placeholder="Contraseña" />
+            <button type="submit" class="bg-blue-700 rounded-md p-2 text-white">Iniciar Sesion</button>
+            <a [routerLink]="['invitado']" class="text-center text-blue-900 underline">Ingresar como invitado</a>  
+        </form>
+    </div>
+</div>

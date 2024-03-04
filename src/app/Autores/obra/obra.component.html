@@ -1,0 +1,25 @@
+<div *ngIf="obra">
+    <div class="text-center p-5">
+        <h1 class="text-xl">{{ obra.title }}</h1>
+    </div>
+    <div class="px-5">
+        <p><strong>Author:</strong> {{ obra.author }}</p>
+    </div>
+    
+    <div *ngIf="obra.lines && obra.lines.length > 0" class="text-center">
+      <p><strong>Lineas:</strong></p>
+      <ul>
+        <li *ngFor="let line of obra.lines">{{ line }}</li>
+      </ul>
+    </div>
+    <div *ngIf="!obra.lines || obra.lines.length === 0">
+      <p>No lines available.</p>
+    </div>
+
+    <p class="px-5"><strong>Line count:</strong> {{ obra.linecount }}</p>
+  </div>
+  
+  <div *ngIf="!obra">
+    <p>Loading...</p>
+  </div>
+  

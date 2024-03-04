@@ -1,0 +1,8 @@
+<div class="p4" >
+    <p class="text-center p-6 text-xl">Listado de Autores:</p>
+    <ul *ngIf="autorList | async as autores" class="px-5 flex flex-wrap justify-center gap-3">
+        <li (click)="onRedirect(autor)" *ngFor="let autor of autores.authors" class="list-outside w-56 border p-5 text-center rounded-md hover:bg-amber-300 cursor-pointer hover:scale-125 transition-all hover:text-white hover:font-semibold">
+            {{autor}}
+        </li>
+    </ul>
+</div>
